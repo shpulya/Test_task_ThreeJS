@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>three.js webgl - orbit controls</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form class="input-form">
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="shape">
+                    <option value="1" selected>Cube</option>
+                    <option value="2">Pyramid</option>
+                    <option value="3">Sphere</option>
+                </select>
+            </div>
+            <div class="col-sm-1">
+                <input type="number" min="1" max="10" class="form-control" id="scale"  required>
+            </div>
+            <div class="col-sm-1">
+                <input type="button" onClick="create()" class="button btn btn-primary"  value="Create">
+            </div>
+        </div>
+    </form>
+
+    <canvas id="canvas">
+    </canvas>
+
+    <ul id="info">
+    </ul>
+    <script src="node_modules/three/build/three.min.js"></script>
+    <script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="node_modules/three/examples/js/Detector.js"></script>
+    <script src="node_modules\jquery\dist\jquery.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
