@@ -1,4 +1,4 @@
-# install dependencies
+# Install dependencies
 - Install three.js:
 npm i three
 
