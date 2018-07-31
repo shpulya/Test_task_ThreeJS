@@ -1,7 +1,6 @@
 var _arrShapes = [];
 var _scene, _renderer, _mesh, _camera, _width, _height, _controls;
 
-
 window.onload = function () {
     var width = window.innerWidth;
     var height = window.innerHeight / 2;
@@ -24,7 +23,6 @@ window.onload = function () {
     var light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
 
-
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     //controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)
     controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
@@ -44,7 +42,6 @@ function create() {
     var scale = +document.getElementById('scale').value;
     var e = document.getElementById('shape');
     var shapeNum = +e.options[e.selectedIndex].value;
-
     var hex = Math.floor(Math.random() * 0xffffff);
 
     switch (shapeNum) {
@@ -72,7 +69,6 @@ function create() {
     this._scene.add(this._mesh);
     loop();
     animate();
-
     this._arrShapes.push({'color': hex, 'shape': shapeName, 'uuid': mesh.uuid, 'name': mesh.name})
     addNewItemToList(this._arrShapes[this._arrShapes.length - 1]);
 }
@@ -105,7 +101,6 @@ function removeListElement(shapeName) {
     var selectedObject = this._scene.getObjectByName(shapeName.toString());
     this._scene.remove(selectedObject);
     render();
-
     var element = document.getElementById(shapeName), searchedItem;
     element.parentNode.removeChild(element);
     for (const element of this._arrShapes) {
